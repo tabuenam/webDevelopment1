@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+/* Common Styles*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+}
+
+/* For this project I am using rem for the measurement unit 1rem=16pix
+with the modification of html elements font-size 1rem=10pix*/
+html{
+    font-size: 62.5%;
+}
+
+.section-heading{
+    font-size: 12rem;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.5rem;
+    text-shadow: .3rem .3rem 3rem #000;
+}
+
+/* End Common Styles*/
+
+/* Navbar*/
+.navbar{
+    width: 100%;
+    height: 15rem;
+    background-color: #000;
+    position: fixed;
+    top: -14rem;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: .5rem .5rem .5rem #000;
+    transition: top 0.5s;
+}
+
+.navbar.slidedown{
+    top:0;
+    transition: top 0.5s 0.3s;
+}
+
+.navbar-link{
+    color: #888;
+    margin: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.4s, opacity 0.2s;
+    opacity: 0;
+}
+
+.slidedown .navbar-link{
+    opacity:1;
+}
+
+.slidedown .navbar-link:nth-child(1){
+    transition:opacity .5s .6s, color 0.3s;
+}
+.slidedown .navbar-link:nth-child(2){
+    transition:opacity .5s .7s, color 0.3s;
+}
+.slidedown .navbar-link:nth-child(3){
+    transition:opacity .5s .8s, color 0.3s;
+}
+.slidedown .navbar-link:nth-child(4){
+    transition:opacity .5s .9s, color 0.3s;
+}
+.slidedown .navbar-link:nth-child(5){
+    transition:opacity .5s .95s, color 0.3s;
+}
+
+.navbar-link:hover{
+    color: white ;
+}
+
+.navbar-link i{
+    font-size: 7rem;
+}
+
+.navbar-link span{
+    font-size: 3rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+.menu{
+    width: 4rem;
+    height: 6rem;
+    background-color: #000;
+    position: fixed;
+    top: 2rem; /*18rem*/
+    left: 5rem;
+    cursor: pointer;
+    border-radius: 2rem 2rem 1rem 1rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem #000;
+    transition: top 0.5s .2s;
+}
+
+.menu::before{
+    content: "";
+    width: 0.5rem;
+    height: 22rem;
+    background-color: #000;
+    position: absolute;
+    top:-18rem;
+    left: calc(50%);
+}
+/* End Navbar*/
+
+.menu.slidedown{
+    top:18rem;
+    transition: top 0.4s;
+}
+
+/* Section-1*/
+.section-1{
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.section-1-icons i{
+    font-size: 35rem;
+    color: #a79a2d;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0);
+    text-shadow: .2rem .2rem .2rem #000;
+    transition: transform .3s;
+}
+
+.section-1-icons i.change{
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform .3s .3s
+}
+/* End Section-1*/
+/* Section-2*/
+.section-2{
+    width: 100%;
+    height: 100vh;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10rem 0;
+}
+
+.card-containter{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 30rem;
+    background-color: #a79a2d;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1rem 1rem 1rem #000;
+    transform: rotateY(20deg) skewX(-2deg);
+    transition: transform 1s, box-shadow 1s;
+}
+
+.card:hover{
+    transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
+    box-shadow: 2rem 2rem 2rem #000;
+}
+.card-img{
+    width: 100%;
+}
+
+.card-name{
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: #111;
+    margin: 2rem 0;
+    text-shadow: 0.1rem 0.1rem 0.1rem #000;
+}
+
+.card-btn {
+    width: 70%;
+    background-color: #111;
+    color: #888;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    text-transform: capitalize;
+    border: none;
+    padding: .5rem 0;
+    cursor: pointer;
+    box-shadow: -.2rem -.2rem -.2rem #000;
+}
+/* End Section-2*/
+/* Section-3*/
+.section-3{
+    background-color: #333;
+    padding: 5rem 0;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10rem;
+}
+
+.gallery-link{
+    position: relative;
+    margin: 4rem 1rem;
+}
+
+/* this is going to create the vertical line sorrounding the paragraph inside the image
+that is why we use gallery-link class and not food-description which is the actually text */
+.gallery-link::before{
+    content: "";
+    position: absolute;
+    width: 0.2rem;
+    height: 0;
+    top: 2vw;
+    left: 80%;
+    background-color: #fff;
+    transition: height .5s;
+    z-index: 10;
+}
+
+.gallery-link:hover::before{
+    height: 80%;
+}
+
+/* this is going to create the horzontal line sorrounding the paragraph inside the image
+that is why we use gallery-link class and not food-description which is the actually text */
+.gallery-link::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0.2rem;
+    top: 4vw;
+    left: 3rem;
+    background-color: #fff;
+    transition: width .5s;
+}
+
+.gallery-link:hover::after{
+    width: 90%;
+}
+
+/* reduce the size of the images to fit them in the view-width */
+.gallery-img{
+    width: 24vw;
+    height: 15vw;
+    margin: 4rem 1rem;
+    object-fit: cover;
+    transition: all .6s;
+}
+
+.gallery-link:hover .gallery-img{
+    filter: blur(1rem);
+    opacity: 0.4;
+    transform: scale(1.1);
+}
+
+.food-name{
+    position: absolute;
+    top: 6rem;
+    left: 3rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #fff;
+    width: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.gallery-link:hover .food-name{
+    width: 100%;
+    transition: 1.5s .5s;
+}
+
+.food-description{
+    position: absolute;
+    bottom: 10rem;
+    left: 2rem;
+    width: 70%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s;
+}
+
+.gallery-link:hover .food-description{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s 1s;
+}
+/* End Section-3*/
+
+/* Responsive */
+@media (max-width: 1400px) {
+    html {
+      font-size: 50%;
+    }
+  
+    .section-2 {
+      height: auto;
+    }
+  
+    .cards-container {
+      margin-top: 10rem;
+    }
+  
+    .gallery-link {
+      width: 40rem;
+      height: 25rem;
+      margin: 5rem;
+    }
+  
+    .food-img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .section-heading {
+      font-size: 9rem;
+      margin: 0 5rem;
+    }
+  
+    .section-1-icons i {
+      font-size: 25rem;
+    }
+  
+    .cards-container {
+      flex-wrap: wrap;
+    }
+  
+    .card {
+      margin: 5rem;
+    }
+  
+    .section-4 {
+      height: 30rem;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .navbar-link {
+      margin: 2rem;
+    }
+  
+    .navbar-link i {
+      font-size: 4rem;
+    }
+  
+    .navbar-link span {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .section-heading {
+      font-size: 7rem;
+      margin: 0 10rem;
+    }
+  
+    .section-1-icons i {
+      font-size: 20rem;
+    }
+  
+    .menu {
+      left: 2rem;
+    }
+  
+    .section-4 {
+      height: 40rem;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  
+    .section-4-text {
+      margin-bottom: 8rem;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    html {
+      font-size: 40%;
+    }
+  
+    .navbar-link {
+      margin: 0 0.7rem;
+    }
+  }
+  /* End of Responsive */
+  
