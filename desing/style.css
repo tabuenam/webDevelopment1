@@ -63,11 +63,40 @@
     }
  }
   /* End floating-*/
+  
+  /* navbar*/
+.navbar{
+    position: relative;
+    z-index: 20;
+    top: 5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar-link{
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 2rem;
+    letter-spacing: .3rem;
+    width: 1rem;
+    word-wrap: break-word ;
+    transition: 2s;
+    text-align: center;
+}
+
+.navbar-link:hover{
+    width: 20rem;
+    color: black;
+    background-color: aliceblue;
+    transition: 3s;
+    justify-content: center;
+}
+/* End ofnavbar*/
+
+
   /* End Section-1*/
   
   
-  /* floating-bg*/
-  /* floating-bg*/
   /* floating-bg*/
   /* End floating-*/
   /* End floating-*/
